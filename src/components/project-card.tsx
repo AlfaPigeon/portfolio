@@ -31,6 +31,7 @@ interface Props {
   tags: readonly string[];
   image?: string;
   video?: string;
+  logoUrl?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -47,6 +48,7 @@ export function ProjectCard({
   tags,
   image,
   video,
+  logoUrl,
   links,
   className,
 }: Props) {
@@ -114,9 +116,21 @@ export function ProjectCard({
       </div>
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
-          <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">{title}</h3>
-            <time className="text-xs text-muted-foreground">{dates}</time>
+          <div className="flex items-center gap-3 min-w-0">
+            {logoUrl && (
+              <img
+                src={logoUrl}
+                alt={title}
+                className="size-8 p-1 border rounded-full shadow ring-1 ring-border overflow-hidden object-contain flex-none bg-white"
+                onError={(e) => {
+                  (e.currentTarget as HTMLElement).style.display = "none";
+                }}
+              />
+            )}
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <h3 className="font-semibold leading-tight">{title}</h3>
+              <time className="text-xs text-muted-foreground">{dates}</time>
+            </div>
           </div>
           <button
             type="button"
@@ -138,7 +152,12 @@ export function ProjectCard({
             {tags.map((tag) => (
               <Badge
                 key={tag}
-                className="text-[11px] font-medium border border-border h-6 w-fit px-2"
+                className={cn(
+                  "text-[11px] font-medium border h-6 w-fit px-2",
+                  tag.includes("Pre-LLM")
+                    ? "border-amber-500/40 bg-amber-500/10 text-amber-700 dark:text-amber-300 font-semibold"
+                    : "border-border"
+                )}
                 variant="outline"
               >
                 {tag}

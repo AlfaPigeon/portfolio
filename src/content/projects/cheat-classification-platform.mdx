@@ -1,0 +1,16 @@
+---
+title: "Cheat Classification Platform"
+dates: "Jan 2022"
+summary: "An academic exam proctoring platform combining Flutter, real-time gaze direction tracking via edge algorithms, and custom YOLO object detection models."
+technologies: ["2022", "Flutter", "Python", "TensorFlow", "YOLO", "Computer Vision", "Edge Detection"]
+image: "/photos/photo2.jpg"
+links: []
+---
+
+A university software engineering project designed for automated academic integrity monitoring and suspicious behavior classification during online examinations.
+
+## Architecture & Technical Contributions
+
+- **Gaze & Head Orientation Detection**: Developed gaze-tracking algorithms using facial landmark detection and Canny edge detection to track eye direction and student head position in real time.
+- **YOLO Object Detection**: Trained a custom YOLO model using TensorFlow and transfer learning with custom phone photography datasets to detect unauthorized secondary devices (such as smartphones) during tests.
+- **Cross-Platform Integration**: Built the cross-platform application interface in Flutter and established the connection pipeline bridging real-time computer vision inference scripts with the app frontend (retrieved via pull request `AlfaPigeon/obj_det_connection`).

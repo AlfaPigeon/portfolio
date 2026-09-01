@@ -143,7 +143,7 @@ export const DATA = {
       badges: ["AI Architecture"],
       location: "Ankara, Turkey",
       title: "Lead AI & Software Architect",
-      logoUrl: "https://www.google.com/s2/favicons?domain=elfcan.com&sz=128",
+      logoUrl: withBasePath("logos/ElfcanTechLogo.png"),
       start: "2025",
       end: undefined,
       description:
@@ -156,7 +156,7 @@ export const DATA = {
       badges: ["PsyStorm Games", "Game Dev"],
       location: "Ankara, Turkey",
       title: "Project Lead & Senior Game Developer",
-      logoUrl: "https://www.google.com/s2/favicons?domain=linkedin.com&sz=128",
+      logoUrl: withBasePath("logos/CerebrumTechnologiesLogo.avif"),
       start: "2022",
       end: "2024",
       description:
@@ -178,11 +178,11 @@ export const DATA = {
     {
       category: "Independent Ventures",
       company: "Slootea",
-      href: "https://slootea.com",
+      href: "https://github.com/Slootea/Slootea",
       badges: ["Co-Founder"],
       location: "Ankara, Turkey",
       title: "Co-Founder & Technical Lead",
-      logoUrl: "https://www.google.com/s2/favicons?domain=slootea.com&sz=128",
+      logoUrl: withBasePath("logos/SlooteaLogo.png"),
       start: "2026",
       end: "2026",
       description:
@@ -194,7 +194,7 @@ export const DATA = {
       href: "https://employcase.com",
       badges: ["Founder"],
       location: "Ankara, Turkey",
-      title: "Founder & Lead Developer",
+      title: "Founder",
       logoUrl: "https://www.google.com/s2/favicons?domain=employcase.com&sz=128",
       start: "2025",
       end: "2025",
@@ -248,33 +248,39 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Slootea",
+      slug: "slootea",
+      href: withBasePath("projects/slootea"),
+      dates: "Apr 2026",
+      active: false,
+      logoUrl: withBasePath("logos/SlooteaLogo.png"),
+      description:
+        "B2B beauty center management system for appointments, clients, and inventory control (Discontinued).",
+      details:
+        "Slootea is a modern B2B management platform designed specifically for beauty centers, medical spas, and wellness clinics to streamline daily operations. Developed in April 2026, the project has since been discontinued and the live site is down, but the codebase remains accessible.\n\n### Key Capabilities\n- **Smart Scheduling**: Interactive appointment booking system with automated time slot optimization and client reminders.\n- **Client & Inventory Tracking**: Centralized customer CRM alongside real-time stock management and usage analytics.\n- **Business Operations**: Built using Next.js, TypeScript, and PostgreSQL to deliver high reliability and fast response times for multi-staff facilities.",
+      technologies: ["Apr 2026", "Next.js", "TypeScript", "PostgreSQL", "Business Ops"],
+      links: [
+        { type: "Source Code", href: "https://github.com/Slootea/Slootea", icon: <Icons.github className="size-3" /> },
+      ],
+      image: withBasePath("logos/SlooteaLogo.png"),
+      video: "",
+    },
+    {
       title: "Employcase",
       slug: "employcase",
       href: withBasePath("projects/employcase"),
       dates: "2025",
       active: true,
+      logoUrl: withBasePath("logos/Employcase_Logo_side.png"),
       description:
         "Candidate engagement and HR interview platform with custom AI models and simulation-based tooling.",
-      technologies: ["Next.js", "Node.js", "Python", "AI/ML", "PostgreSQL"],
+      details:
+        "Employcase is an advanced SaaS candidate engagement and specialized HR interview platform engineered to modernize talent acquisition workflows.\n\n### System Architecture\n- **AI-Assisted Interviews**: Integrated custom AI evaluation models and automated screening pipelines to evaluate technical and soft skills.\n- **Simulation Tooling**: Interactive simulation features that mirror real-world scenario tests for candidate assessment.\n- **Full-Stack SaaS**: Built with Next.js, Node.js, Python, and PostgreSQL with emphasis on candidate experience and HR productivity.",
+      technologies: ["2025", "Next.js", "Node.js", "Python", "AI/ML", "PostgreSQL"],
       links: [
         { type: "Website", href: "https://employcase.com", icon: <Icons.globe className="size-3" /> },
       ],
-      image: withBasePath("photos/photo3.jpg"),
-      video: "",
-    },
-    {
-      title: "Slootea",
-      slug: "slootea",
-      href: withBasePath("projects/slootea"),
-      dates: "2026",
-      active: true,
-      description:
-        "B2B beauty center management system for appointments, clients, and inventory control.",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Business Ops"],
-      links: [
-        { type: "Website", href: "https://slootea.com", icon: <Icons.globe className="size-3" /> },
-      ],
-      image: withBasePath("photos/photo4.jpg"),
+      image: withBasePath("logos/Employcase_Logo_side.png"),
       video: "",
     },
     {
@@ -285,11 +291,82 @@ export const DATA = {
       active: true,
       description:
         "Single-player horror game developed with a small team from concept to release.",
-      technologies: ["Unity3D", "Game Design", "C#", "Multiplayer Demo"],
+      details:
+        "Unheil is a single-player horror game project developed with a small independent team from initial concept through production and release.\n\n### Production Highlights\n- **Game Engineering**: Built core gameplay mechanics, atmosphere shaders, player controls, and dynamic interaction systems in Unity3D with C#.\n- **Atmospheric Design**: Focused on sound design, lighting immersion, and environmental storytelling.\n- **Project Execution**: Coordinated cross-disciplinary work including art, level design, and technical integration over a 2-year development cycle.",
+      technologies: ["2022 - 2024", "Unity3D", "Game Design", "C#", "Multiplayer Demo"],
       links: [
         { type: "Portfolio", href: "https://www.linkedin.com", icon: <Icons.globe className="size-3" /> },
       ],
-      image: withBasePath("photos/photo5.jpg"),
+      image: withBasePath("photos/UnheilHeader.jpg"),
+      video: "",
+    },
+    {
+      title: "CereverseScape",
+      slug: "cereverse-scape",
+      href: withBasePath("projects/cereverse-scape"),
+      dates: "Oct 2022",
+      active: true,
+      logoUrl: withBasePath("logos/CerebrumTechnologiesLogo.avif"),
+      description:
+        "A metaverse virtual environment and multiplayer simulation platform created at Cerebrum Technologies.",
+      details:
+        "Built during my role at Cerebrum Technologies, **CereverseScape** is an interactive metaverse environment and multiplayer simulation platform.\n\n### Overview & Capabilities\n- **Multiplayer Architecture**: Engineered real-time multiplayer systems and networked state synchronization for interactive virtual worlds.\n- **Simulation Mechanics**: Designed scalable 3D physics and simulation loops using Unity3D and C#.\n- **System Capabilities**: Highlights expertise in designing complex, low-latency multiplayer gaming and virtual environment systems from the ground up.",
+      technologies: ["2022", "Unity3D", "C#", "Multiplayer", "Metaverse", "Simulations"],
+      links: [
+        { type: "Source Code", href: "https://github.com/AlfaPigeon/Cereverse_Scape", icon: <Icons.github className="size-3" /> },
+      ],
+      image: withBasePath("photos/photo1.jpg"),
+      video: "",
+    },
+    {
+      title: "Cheat Classification Platform",
+      slug: "cheat-classification-platform",
+      href: withBasePath("projects/cheat-classification-platform"),
+      dates: "Jan 2022",
+      active: true,
+      description:
+        "An academic exam proctoring platform combining Flutter, real-time gaze detection via edge algorithms, and custom YOLO object detection models.",
+      details:
+        "A university software engineering project designed for automated academic integrity monitoring and suspicious behavior classification during online examinations.\n\n### Core Architecture & Technical Contributions\n- **Gaze & Head Orientation Detection**: Developed gaze-tracking algorithms using facial landmark detection and Canny edge detection to track eye direction and student head position in real time.\n- **YOLO Object Detection**: Trained a custom YOLO model using TensorFlow and transfer learning with custom phone photography datasets to detect unauthorized secondary devices (such as smartphones) during tests.\n- **Cross-Platform & Pipeline Integration**: Built the cross-platform application interface in Flutter and established the connection pipeline bridging real-time computer vision inference scripts with the app frontend (`AlfaPigeon/obj_det_connection`).",
+      technologies: ["2022", "Flutter", "Python", "TensorFlow", "YOLO", "Computer Vision", "Edge Detection"],
+      links: [],
+      image: withBasePath("photos/photo2.jpg"),
+      video: "",
+    },
+    {
+      title: "CNN Implementation from Scratch",
+      slug: "cnn-implementation",
+      href: withBasePath("projects/cnn-implementation"),
+      dates: "Jul 2020",
+      active: true,
+      description:
+        "A custom deep learning framework built from mathematical principles using NumPy and Keras to train CNNs for melanoma skin cancer classification.",
+      details:
+        "Developed in July 2020 (**Pre-LLM Era**), this university project focused on constructing a Convolutional Neural Network (CNN) deep learning framework directly from mathematical foundations.\n\n### Engineering & Implementation\n- **First-Principles AI Math**: Programmed custom forward and backward passes from scratch using NumPy and Keras, implementing gradient descent optimization, max pooling, fully connected layers, and custom convolutional layers.\n- **Activation Function Analysis**: Benchmarked and evaluated performance across multiple activation functions to achieve optimal gradient flow and model convergence.\n- **Melanoma Detection**: Applied the neural network framework to classify dermatoscopic images for melanoma (a malignant form of skin cancer).\n- **Kaggle Competition Benchmark**: Validated the custom model on the [SIIM-ISIC Melanoma Classification Kaggle Competition](https://www.kaggle.com/competitions/siim-isic-melanoma-classification), achieving a **private score of 0.6899** and a **public score of 0.6551**.",
+      technologies: ["2020 (Pre-LLM Era)", "Python", "NumPy", "Keras", "Deep Learning", "Melanoma AI"],
+      links: [
+        { type: "Source Code", href: "https://github.com/Kerem-Arikan/bil_470_project_repo", icon: <Icons.github className="size-3" /> },
+        { type: "Kaggle", href: "https://www.kaggle.com/competitions/siim-isic-melanoma-classification", icon: <Icons.globe className="size-3" /> },
+      ],
+      image: withBasePath("photos/photo6.jpg"),
+      video: "",
+    },
+    {
+      title: "Turkcell Business Model Canvas",
+      slug: "turkcell-business-model-canvas",
+      href: withBasePath("projects/turkcell-business-model-canvas"),
+      dates: "Nov 2019",
+      active: true,
+      logoUrl: "https://www.google.com/s2/favicons?domain=turkcell.com.tr&sz=128",
+      description:
+        "An enterprise resource and partner management platform inspired by Strategyzer's Business Model Canvas, featuring a 17-table relational database and 60+ active app sections.",
+      details:
+        "Developed during an engineering internship at Turkcell in November 2019 (**Pre-LLM Era**) and open-sourced with permission after decommission.\n\n### System Architecture & Technical Highlights\n- **17-Table Relational Database**: Designed and normalized a complex database structure modeling enterprise partners, key activities, resources, channels, and task management workflows based on Strategyzer's Business Model Canvas framework.\n- **Full-Stack Enterprise Build**: Built end-to-end backend business logic in C# alongside server-rendered frontend interfaces in ASP.NET Razor Pages.\n- **Extensive UI & Modules**: Features 10 primary navigation modules, authentication, settings, and over 60 active interactive sections including custom editing suites.\n- **Pre-LLM Systems Mastery**: Demonstrates solid software architecture, relational database modeling, and complex problem-solving crafted entirely prior to the advent of modern AI coding tools.",
+      technologies: ["2019 (Pre-LLM Era)", "ASP.NET Razor Pages", "C#", "SQL Server", "Relational DB", "Enterprise"],
+      links: [
+        { type: "Source Code", href: "https://github.com/AlfaPigeon/TurkcellBussinessModelCanvas", icon: <Icons.github className="size-3" /> },
+      ],
+      image: withBasePath("logos/TurkcellLogo.jpeg"),
       video: "",
     },
   ],
