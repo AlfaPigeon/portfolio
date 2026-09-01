@@ -1,6 +1,6 @@
-import { defineMiddleware } from "astro:middleware";
+import { defineMiddleware, type MiddlewareContext, type MiddlewareNext } from "astro:middleware";
 
-export const onRequest = defineMiddleware(async (_ctx, next) => {
+export const onRequest = defineMiddleware(async (_ctx: MiddlewareContext, next: MiddlewareNext) => {
   const response = await next();
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("X-Frame-Options", "DENY");

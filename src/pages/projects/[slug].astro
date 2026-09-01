@@ -1,0 +1,72 @@
+---
+export const prerender = true;
+import Layout from "@/layouts/Layout.astro";
+import { DATA } from "@/data/resume";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+
+export async function getStaticPaths() {
+  return DATA.projects.map((project) => ({
+    params: { slug: project.slug ?? project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-") },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const projectLinks = project.links ?? [];
+---
+
+<Layout title={project.title} description={project.description} image={project.image || DATA.ogImage} canonicalURL={`${DATA.url}/projects/${project.slug ?? project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
+  <section class="mx-auto max-w-3xl py-8">
+    <a
+      href="/"
+      class="inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
+    >
+      <ArrowLeft className="size-4" />
+      Back home
+    </a>
+
+    <div class="overflow-hidden rounded-2xl border border-border bg-card mb-8">
+      {project.video ? (
+        <video src={project.video} autoplay loop muted playsinline class="w-full h-72 object-cover" />
+      ) : project.image ? (
+        <img src={project.image} alt={project.title} class="w-full h-72 object-cover" />
+      ) : (
+        <div class="h-72 w-full bg-muted" />
+      )}
+    </div>
+
+    <div class="mb-6 flex items-center justify-between gap-4">
+      <div>
+        <p class="text-sm text-muted-foreground">{project.dates}</p>
+        <h1 class="mt-2 text-3xl font-semibold tracking-tight">{project.title}</h1>
+      </div>
+      {projectLinks.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {projectLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-sm hover:bg-accent transition-colors"
+            >
+              <span>{link.type}</span>
+              <ArrowUpRight className="size-3.5" />
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="mb-8 flex flex-wrap gap-2">
+      {project.technologies.map((tech) => (
+        <span class="rounded-full border border-border px-2.5 py-1 text-xs text-muted-foreground">
+          {tech}
+        </span>
+      ))}
+    </div>
+
+    <div class="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+      <p>{project.description}</p>
+    </div>
+  </section>
+</Layout>

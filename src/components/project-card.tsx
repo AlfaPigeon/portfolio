@@ -50,20 +50,31 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const handleNavigate = () => {
+    if (!href) return;
+    if (typeof window !== "undefined") {
+      window.location.href = href;
+    }
+  };
+
   return (
     <div
+      role="link"
+      tabIndex={0}
+      onClick={handleNavigate}
+      onKeyDown={(event) => {
+        if ((event.key === "Enter" || event.key === " ") && href) {
+          event.preventDefault();
+          handleNavigate();
+        }
+      }}
       className={cn(
         "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
         className
       )}
     >
       <div className="relative shrink-0">
-        <a
-          href={href || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
+        <div className="block">
           {video ? (
             <video
               src={video}
@@ -78,7 +89,7 @@ export function ProjectCard({
           ) : (
             <div className="w-full h-48 bg-muted" />
           )}
-        </a>
+        </div>
         {links && links.length > 0 && (
           <div className="absolute top-2 right-2 flex flex-wrap gap-2">
             {links.map((link, idx) => (
@@ -107,15 +118,17 @@ export function ProjectCard({
             <h3 className="font-semibold">{title}</h3>
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
-          <a
-            href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              handleNavigate();
+            }}
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
             aria-label={`Open ${title}`}
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </a>
+          </button>
         </div>
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>
