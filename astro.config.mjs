@@ -21,7 +21,9 @@ const prettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: CONFIG.site.url,
+  base: CONFIG.site.base,
   output: 'static',
+  outDir: './docs',
 
   vite: {
     plugins: [tailwindcss()],

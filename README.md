@@ -2,6 +2,8 @@
 
 Personal portfolio for a engineer, AI architect, and tech entrepreneur.
 
+Live site: https://alfapigeon.github.io/portfolio/
+
 ## Stack
 
 - Astro
@@ -23,6 +25,7 @@ Open http://localhost:4321
 - Edit profile/content in `src/data/resume.tsx`
 - Update site metadata in `src/data/config.ts`
 - Replace the profile image in `public/profile-image.jpeg`
+- GitHub Pages publishes the generated `docs` folder
 
 ## Contact
 

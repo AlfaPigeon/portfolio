@@ -1,6 +1,7 @@
 export const CONFIG = {
   site: {
-    url: "https://beysco.com",
+    url: "https://alfapigeon.github.io",
+    base: "/portfolio",
     locale: "en_US",
     twitterHandle: "@oguzkaanozsoy",
   },

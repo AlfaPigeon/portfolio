@@ -19,17 +19,25 @@ type PortfolioLink = {
   href: string;
 };
 
+const BASE_PATH = import.meta.env.BASE_URL || "/";
+const withBasePath = (path = "") => {
+  const base = BASE_PATH.endsWith("/") ? BASE_PATH : `${BASE_PATH}/`;
+  const cleanPath = path.replace(/^\/+/, "");
+
+  return `${base}${cleanPath}`;
+};
+
 export const DATA = {
   name: "Oğuz Kaan Özsoy",
   initials: "OÖ",
-  url: "https://beysco.com",
+  url: "https://alfapigeon.github.io/portfolio",
   location: "Ankara, Turkey",
   locationLink: "https://maps.google.com/?q=Ankara,Turkey",
   description: "Engineer & Tech Entrepreneur.",
   summary:
     "I enjoy generating new ideas, developing products, and creating technological solutions to real-world problems.",
-  avatarUrl: "/profile-image.jpeg",
-  ogImage: "/og_image.png",
+  avatarUrl: withBasePath("profile-image.jpeg"),
+  ogImage: withBasePath("og_image.png"),
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     work: { order: 2, enabled: true, heading: "Work Experience", presentLabel: "Present" },
@@ -63,15 +71,15 @@ export const DATA = {
     },
   },
   photos: [
-    { src: "/photos/photo1.jpg", alt: "Photo 1" },
-    { src: "/photos/photo2.jpg", alt: "Photo 2" },
-    { src: "/photos/photo3.jpg", alt: "Photo 3" },
-    { src: "/photos/photo4.jpg", alt: "Photo 4" },
-    { src: "/photos/photo5.jpg", alt: "Photo 5" },
-    { src: "/photos/photo6.jpg", alt: "Photo 6" },
-    { src: "/photos/photo7.jpg", alt: "Photo 7" },
-    { src: "/photos/photo8.jpg", alt: "Photo 8" },
-    { src: "/photos/photo9.jpg", alt: "Photo 9" },
+    { src: withBasePath("photos/photo1.jpg"), alt: "Photo 1" },
+    { src: withBasePath("photos/photo2.jpg"), alt: "Photo 2" },
+    { src: withBasePath("photos/photo3.jpg"), alt: "Photo 3" },
+    { src: withBasePath("photos/photo4.jpg"), alt: "Photo 4" },
+    { src: withBasePath("photos/photo5.jpg"), alt: "Photo 5" },
+    { src: withBasePath("photos/photo6.jpg"), alt: "Photo 6" },
+    { src: withBasePath("photos/photo7.jpg"), alt: "Photo 7" },
+    { src: withBasePath("photos/photo8.jpg"), alt: "Photo 8" },
+    { src: withBasePath("photos/photo9.jpg"), alt: "Photo 9" },
   ],
   skills: [
     { name: "Node.js", icon: Nodejs },
@@ -86,8 +94,8 @@ export const DATA = {
     { name: "DevOps", icon: Kubernetes },
   ],
   navbar: [
-    { href: "/", icon: House, label: "Home" },
-    { href: "/blog", icon: Library, label: "Blog" },
+    { href: withBasePath(), icon: House, label: "Home" },
+    { href: withBasePath("blog"), icon: Library, label: "Blog" },
   ],
   contact: {
     email: "oguz@beysco.com",
@@ -242,7 +250,7 @@ export const DATA = {
     {
       title: "Employcase",
       slug: "employcase",
-      href: "/projects/employcase",
+      href: withBasePath("projects/employcase"),
       dates: "2025",
       active: true,
       description:
@@ -251,13 +259,13 @@ export const DATA = {
       links: [
         { type: "Website", href: "https://employcase.com", icon: <Icons.globe className="size-3" /> },
       ],
-      image: "/photos/photo3.jpg",
+      image: withBasePath("photos/photo3.jpg"),
       video: "",
     },
     {
       title: "Slootea",
       slug: "slootea",
-      href: "/projects/slootea",
+      href: withBasePath("projects/slootea"),
       dates: "2026",
       active: true,
       description:
@@ -266,13 +274,13 @@ export const DATA = {
       links: [
         { type: "Website", href: "https://slootea.com", icon: <Icons.globe className="size-3" /> },
       ],
-      image: "/photos/photo4.jpg",
+      image: withBasePath("photos/photo4.jpg"),
       video: "",
     },
     {
       title: "Unheil",
       slug: "unheil",
-      href: "/projects/unheil",
+      href: withBasePath("projects/unheil"),
       dates: "2022 - 2024",
       active: true,
       description:
@@ -281,7 +289,7 @@ export const DATA = {
       links: [
         { type: "Portfolio", href: "https://www.linkedin.com", icon: <Icons.globe className="size-3" /> },
       ],
-      image: "/photos/photo5.jpg",
+      image: withBasePath("photos/photo5.jpg"),
       video: "",
     },
   ],
