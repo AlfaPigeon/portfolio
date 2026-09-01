@@ -32,4 +32,4 @@ Open http://localhost:4321
 - Email: oguz@beysco.com
 - Phone: +90 535 559 50 19
 - GitHub: https://github.com/AlfaPigeon
-- Linktree: https://linktr.ee/oguzkaanozsoy
+- Linktree: https://oguzkaan.carrd.co

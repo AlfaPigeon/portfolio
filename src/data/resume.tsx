@@ -109,7 +109,7 @@ export const DATA = {
       },
       Linktree: {
         name: "Linktree",
-        url: "https://linktr.ee/oguzkaanozsoy",
+        url: "https://oguzkaan.carrd.co",
         icon: Icons.globe,
         navbar: true,
       },
