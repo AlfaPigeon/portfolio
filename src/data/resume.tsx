@@ -168,7 +168,7 @@ export const DATA = {
       href: "https://haserkek.com",
       badges: ["Founder"],
       location: "Ankara, Turkey",
-      title: "Founder & Operations Lead",
+      title: "Founder",
       logoUrl: "https://www.google.com/s2/favicons?domain=haserkek.com&sz=128",
       start: "2026",
       end: undefined,
@@ -181,7 +181,7 @@ export const DATA = {
       href: "https://github.com/Slootea/Slootea",
       badges: ["Co-Founder"],
       location: "Ankara, Turkey",
-      title: "Co-Founder & Technical Lead",
+      title: "Co-Founder",
       logoUrl: withBasePath("logos/SlooteaLogo.png"),
       start: "2026",
       end: "2026",
@@ -349,6 +349,72 @@ export const DATA = {
         { type: "Kaggle", href: "https://www.kaggle.com/competitions/siim-isic-melanoma-classification", icon: <Icons.globe className="size-3" /> },
       ],
       image: withBasePath("photos/photo6.jpg"),
+      video: "",
+    },
+    {
+      title: "Genetic Algorithm Implementation",
+      slug: "genetic-algorithm-implementation",
+      href: withBasePath("projects/genetic-algorithm-implementation"),
+      dates: "Jul 2020",
+      active: true,
+      description:
+        "A heuristic lesson scheduling optimizer that uses a genetic algorithm to satisfy academic constraints and improve timetable quality.",
+      details:
+        "Developed in July 2020, this project focused on solving a lesson scheduling problem by designing and implementing a genetic algorithm from scratch.\n\n### Problem & Approach\n- **Constraint-Based Scheduling**: Modeled class, instructor, and room constraints as optimization objectives so the algorithm could produce feasible timetable combinations.\n- **Evolutionary Search**: Used a genetic algorithm with fitness evaluation, selection, crossover, and mutation to iteratively improve candidate schedules.\n- **Heuristic Design**: Demonstrated practical problem-solving skills in building custom heuristic logic for a real optimization challenge.\n\nThis work reflects my ability to design and implement heuristic algorithms for complex combinatorial problems beyond straightforward rule-based systems.",
+      technologies: ["Jul 2020", "Python", "Genetic Algorithm", "Optimization", "Scheduling", "Heuristics", "University Project"],
+      links: [
+        { type: "Source Code", href: "https://github.com/AlfaPigeon/Genetic-Algorithm-Lesson-Scheduler", icon: <Icons.github className="size-3" /> },
+      ],
+      image: withBasePath("photos/photo7.jpg"),
+      video: "",
+    },
+    {
+      title: "Suspicious and Toxic Discussion Classification",
+      slug: "suspicious-and-toxic-discussion-classification",
+      href: withBasePath("projects/suspicious-and-toxic-discussion-classification"),
+      dates: "Dec 2020",
+      active: true,
+      description:
+        "A Reddit discussion classification pipeline using TensorFlow, spaCy, Spark, and pseudo-labeling to detect toxic or suspicious content.",
+      details:
+        "Developed in December 2020, this project focused on building an effective classification workflow for online forum discussions using scraped Reddit data.\n\n### Data & Model Pipeline\n- **Dataset Collection**: Scraped discussion data from Reddit and prepared a labeled corpus for suspicious and toxic content analysis.\n- **Deep Learning with TensorFlow**: Trained a model using TensorFlow and spaCy word embeddings to capture semantic features from discussion text.\n- **Distributed Processing with Spark**: Compared model performance against a Spark-based pipeline to evaluate scaling and processing trade-offs.\n- **Pseudo-Labeling**: Used the model itself to generate labels for unlabeled or partially missing examples, improving training coverage for the dataset.\n\nThis project highlights my work with NLP pipelines, large-scale text processing, and hybrid ML strategies for real-world social data.",
+      technologies: ["Dec 2020", "Python", "TensorFlow", "spaCy", "PySpark", "NLP", "Pseudo-labeling", "Classification"],
+      links: [
+        { type: "Source Code", href: "https://github.com/AlfaPigeon/Suspicious-and-Toxic-Discussion-Classification-on-Online-Forums", icon: <Icons.github className="size-3" /> },
+      ],
+      image: withBasePath("photos/photo8.jpg"),
+      video: "",
+    },
+    {
+      title: "DHMI Plane Game",
+      slug: "dhmi-plane-game",
+      href: withBasePath("projects/dhmi-plane-game"),
+      dates: "May 2025",
+      active: true,
+      description:
+        "A kid-friendly airplane game developed for DHMI technology fairs, designed for public interaction and still actively used at events.",
+      details:
+        "This project was created in May 2025 for the Turkish General Directorate of State Airports Authority (DHMI). I built a simple airplane game for children to enjoy at technology fairs, and it is still being used in public events.\n\n### Project Scope\n- **Public-Facing Interaction**: Built a lightweight, engaging game experience tailored for children and fair visitors.\n- **Government Deployment**: Designed for use in technology fairs and public engagement activities, with an emphasis on accessibility and easy interaction.\n- **Game Experience Design**: Focused on fun mechanics, clear controls, and high usability for a broad audience.\n\nThe project demonstrates my ability to ship polished, user-friendly interactive experiences for real-world public and institutional use cases.",
+      technologies: ["May 2025", "Unity3D", "C#", "Game Development", "Government", "Interactive Experience"],
+      links: [],
+      image: withBasePath("photos/photo3.jpg"),
+      video: "",
+    },
+    {
+      title: "Sidre Beauty Website",
+      slug: "sidre-beauty-website",
+      href: withBasePath("projects/sidre-beauty-website"),
+      dates: "2025",
+      active: true,
+      description:
+        "A commercial beauty brand website designed to present services, offers, and brand identity for Sidre Beauty.",
+      details:
+        "I designed and built the Sidre Beauty website for a commercial beauty brand. The site presents the brand clearly and professionally while making it easy for visitors to explore services and contact information.\n\n### Implementation Highlights\n- **Commercial Brand Site**: Built a clean, modern web presence aligned with the beauty brand's visual identity.\n- **Responsive Frontend**: Structured the experience to work smoothly across devices and user contexts.\n- **User Experience Focus**: Designed the content and layout to help visitors quickly understand the brand and services.\n\nThis project reflects my ability to build polished commercial websites that balance aesthetics, clarity, and practical conversion-focused design.",
+      technologies: ["2025", "Commercial", "Web Development", "Brand Website", "UI/UX"],
+      links: [
+        { type: "Website", href: "https://sidrebeauty.com/", icon: <Icons.globe className="size-3" /> },
+      ],
+      image: withBasePath("photos/photo4.jpg"),
       video: "",
     },
     {
