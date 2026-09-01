@@ -37,7 +37,7 @@ export const DATA = {
   summary:
     "I enjoy generating new ideas, developing products, and creating technological solutions to real-world problems.",
   avatarUrl: withBasePath("profile-image.jpeg"),
-  ogImage: withBasePath("og_image.png"),
+  ogImage: withBasePath("profile-image.jpeg"),
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     work: { order: 2, enabled: true, heading: "Work Experience", presentLabel: "Present" },

@@ -23,6 +23,7 @@ const projects = defineCollection({
     technologies: z.array(z.string()),
     image: z.string().optional(),
     video: z.string().optional(),
+    explainerVideo: z.string().optional(),
     links: z
       .array(
         z.object({
