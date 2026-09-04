@@ -316,7 +316,7 @@ export const DATA = {
         { type: "Source Code", href: "https://github.com/AlfaPigeon/Cereverse_Scape", icon: <Icons.github className="size-3" /> },
       ],
       image: withBasePath("photos/photo1.jpg"),
-      video: "",
+      video: withBasePath("videos/CereverseScapeDemo.mp4"),
     },
     {
       title: "Cheat Classification Platform",
