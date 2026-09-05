@@ -43,16 +43,19 @@ My first obsession was the **Business Model Canvas** (Strategyzer). I lived in t
 - **Value Proposition** — what pain am I killing?
 - **Customer Segment** — whose pain is it?
 
-```text
-        ┌──────────────────────┐   ┌──────────────────────┐
-        │  VALUE PROPOSITION   │ → │  CUSTOMER SEGMENT    │
-        │  pain relievers      │   │  jobs, pains, gains  │
-        │  gain creators       │ ← │                      │
-        └──────────────────────┘   └──────────────────────┘
-                    ↑
-              I lived here.
-              The other 7 blocks were... decorations.
+```mermaid
+flowchart LR
+    VP["VALUE PROPOSITION<br/>pain relievers<br/>gain creators"]
+    CS["CUSTOMER SEGMENT<br/>jobs, pains, gains"]
+
+    VP --> CS
+    CS --> VP
+
+    NOTE["I lived here.<br/>The other 7 blocks were... decorations."]
+
+    NOTE --> VP
 ```
+
 
 _Write about: which project this was, how many hours went into the canvas, how confident you felt._
 

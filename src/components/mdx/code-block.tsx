@@ -5,11 +5,13 @@ import { cn } from "@/lib/utils";
 
 type CodeBlockProps = ComponentProps<"pre"> & {
   "data-title"?: string;
+  "data-language"?: string;
 };
 
 export function CodeBlock({ children, ...props }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
   const title = props["data-title"];
+  const language = props["data-language"];
 
   const handleCopy = async () => {
     const text = (document.activeElement?.closest(".group")?.querySelector("code")?.textContent) ?? "";
@@ -23,7 +25,10 @@ export function CodeBlock({ children, ...props }: CodeBlockProps) {
   };
 
   return (
-    <div className="group relative rounded-xl overflow-hidden border border-border my-6">
+    <div
+      className="group relative rounded-xl overflow-hidden border border-border my-6"
+      data-code-block={language}
+    >
       {title && (
         <div className="px-4 py-2 text-xs font-medium border-b border-border bg-muted/50 text-foreground">
           {title}
